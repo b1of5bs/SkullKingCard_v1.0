@@ -1,0 +1,87 @@
+/* Basic styles with a pirate theme */
+    body {
+        font-family: 'Georgia', serif; /* A more 'fun' font */
+        background-color: #3890cf; /* Dark blue, reminiscent of the ocean */
+        color: #e53f26; /* Light warm color for text for contrast */
+        text-align: center;
+        padding: 20px;
+    }
+    .container {
+        max-width: 90%;
+        margin: 0 auto;
+        background-color: #f7f1e3; /* Light parchment color for the container */
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        border-radius: 10px; /* Rounded corners for a softer look */
+    }
+    h1 {
+        color: #1e272e; /* Dark color for the title for emphasis */
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+    label, button {
+        display: block;
+        margin: 15px 0;
+    }
+    input[type="number"] {
+        width: 75px;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #0a3d62;
+    }
+    button {
+        background-color: #e53f26; /* A bright, bold color for the button */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1em;
+        transition: background-color 0.3s;
+    }
+    button:hover {
+        background-color: #e53f26; /* A lighter color on hover */
+    }
+    .player-name {
+        /* existing styles */
+        flex: 1;
+        margin: 0.5em;
+        padding: 0.5em;
+    }
+    
+    /* Media query for screens wider than a specific width, adjust as needed */
+    @media screen and (min-width: 1200px) {
+        .player-column {
+            max-width: 12.5%; /* Adjusts the width of each player column to fit 8 on the screen */
+        }
+    }
+    
+    /* If you want to apply the style based on the number of players without media query */
+    .player-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin: 0.5em;
+    }
+    
+    /* Style applied when there are exactly 8 player columns */
+    .player-column:nth-last-child(8),
+    .player-column:nth-last-child(8) ~ .player-column {
+        max-width: 125px;
+    
+    }
+    table {
+        table-layout: fixed; /* This helps in controlling cell sizes */
+        width: 100%; /* Adjust as needed */
+    }
+    
+    .player-name-cell {
+        width: 50px; /* or any fixed width you prefer */
+    }
+    
+    .player-name-cell input {
+        width: 100%; /* This makes the input field fit the cell */
+        box-sizing: border-box; /* This ensures padding and borders are included in the width */
+    }
+    

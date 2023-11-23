@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skull King Scorecard</title>
+    <link href="style.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Skull King Scorecard</h1>
+        <form id="playerCountForm">
+            <label for="playerCount">How many players are playing?</label>
+            <input type="number" id="playerCount" name="playerCount" min="3" max="8" required>
+            <button type="submit">Start Game</button>
+        </form>
+        <!-- The player scorecard will be dynamically added here -->
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+<!--
+
+    - Add a function so that if there's a tie with 2 or more players, then the notification displays all winners
+    - Add a function so that the Finish the Game button appears once the number of players is submitted, and 
+        disappears once it's pushed (so that only the Play Again button is visible after the notification comes)
+
+-->
